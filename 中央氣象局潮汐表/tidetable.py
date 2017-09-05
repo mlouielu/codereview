@@ -13,6 +13,7 @@ class GetTidal:
     """
     中央氣象局潮汐取得
     """
+    DATA_URL = 'http://www.cwb.gov.tw/V7/forecast/fishery/{tidal_id}_1.htm'
 
     tidal_map = {
         'NSea01': '彭佳嶼基隆海面',
@@ -31,14 +32,6 @@ class GetTidal:
         'NSea16': '金門海面'
     }
 
-    HTML_PARSER = "html.parser"
-    HTML_Html5 = "html5lib"
-    # 預設台南, 嘉義 NSea05
-    keyword: str = "NSea06"
-    head_URL = "http://www.cwb.gov.tw/V7/forecast/fishery/"
-    tail_URL = "_1.htm"
-
-    LIST_URL = "http://www.cwb.gov.tw/V7/forecast/fishery/" + keyword + "_1.htm"
     def __init__(self , keyword):
         self.keyword = keyword
 
