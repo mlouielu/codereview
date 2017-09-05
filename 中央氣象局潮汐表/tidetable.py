@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
+
 import requests
 from bs4 import BeautifulSoup
-import unittest
-from selenium import webdriver
-import html5lib
 
 
 # 潮汐資料物件
