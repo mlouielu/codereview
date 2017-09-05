@@ -36,9 +36,7 @@ class GetTidal:
         self.keyword = keyword
 
     def get(self, areaText: str) -> str:
-        # 替換 keyword
-        URL = self.head_URL + self.keyword + self.tail_URL
-        list_req = requests.get(URL)
+        req = requests.get(DATA_URL.format(tidal_id=self.keyword))
 
         if list_req.status_code == requests.codes.ok:
             soup = BeautifulSoup(list_req.content, self.HTML_Html5)
